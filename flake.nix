@@ -18,6 +18,7 @@
         (vscode-with-extensions.override  {
           vscode = pkgs.vscodium;
           vscodeExtensions = with pkgs.vscode-extensions; [
+            ms-dotnettools.csharp
             jnoortheen.nix-ide
             ionide.ionide-fsharp
             mhutchie.git-graph
