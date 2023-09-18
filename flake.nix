@@ -16,6 +16,7 @@
         dotnet-sdk_8
         gnome.gnome-terminal
         netcoredbg
+	      bashInteractive
 
         (vscode-with-extensions.override  {
           vscode = pkgs.vscode;
