@@ -3,22 +3,22 @@ namespace FakeFallenData
 module Data =
 
     let damageTypeData = [|
-        [|"Slash"     |]
-        [|"Pierce"    |]
-        [|"Bludgeon"  |]
-        [|"Hew"       |]
-        [|"Shockwave" |]
-        [|"Fire"      |]
-        [|"Water"     |]
-        [|"Electric"  |]
-        [|"Cold"      |]
-        [|"Radiant"   |]
-        [|"Silver"    |]
-        [|"Poison"    |]
-        [|"Necrotic"  |]
-        [|"Bleed"     |]
-        [|"Psychic"   |]
-        [|"Spiritual" |]
+        "Slash"    
+        "Pierce"   
+        "Bludgeon" 
+        "Hew"      
+        "Shockwave"
+        "Fire"     
+        "Water"    
+        "Electric" 
+        "Cold"     
+        "Radiant"  
+        "Silver"   
+        "Poison"   
+        "Necrotic" 
+        "Bleed"    
+        "Psychic"  
+        "Spiritual"
     |]
 
     let penetrationCalculationData = [|
@@ -261,7 +261,7 @@ module Data =
         ("Fellcraft {STR,RFX,INT}", 2, vocationalSkill3Data)
     |]
 
-    let movementSpeedData = [|
+    let movementSpeedCalculationData = [|
         ("Humaniod Movement Speed",      30u, "RFX,STR", 10u, "Athletics", 5u )
         ("Flight Movement Speed",        70u, "RFX",     20u, "Athletics", 10u)
         ("Fast 4-Legged Movement Speed", 65u, "RFX",     10u, "Athletics", 5u )
