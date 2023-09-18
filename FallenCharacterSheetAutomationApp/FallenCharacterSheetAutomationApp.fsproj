@@ -6,6 +6,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FakeFallenData.fs" />
     <Compile Include="FallenLib.fs" />
     <Compile Include="FallenData.fs" />
     <Compile Include="Program.fs" />
