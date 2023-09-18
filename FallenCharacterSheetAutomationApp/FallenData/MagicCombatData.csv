@@ -1,8 +1,8 @@
 desc,lvlRequirment,diceModification,penetration,range,engageableOpponents,minResourceRequirment,canVocationAssist,areaOfEffect
-Melee Trick,-1,+0d6,PenetrationCalculation WeakCalc,Melee,EOCalculation Rapid,0,FALSE,None
-Melee,0,+0d6,PenetrationCalculation MediumCalc,Reach,EOCalculation Rapid,1,TRUE,None
-Ranged Trick,-1,+0d6,PenetrationCalculation WeakCalc,Close,EOCalculation Standard,0,TRUE,None
-Ranged,0,+0d6,PenetrationCalculation MediumCalc,Close,EOCalculation Standard,1,TRUE,None
-Cone,0,+0d6,PenetrationCalculation MediumCalc,Close,CalculatedEO Focused,1,TRUE,Cone
-Focused,1,+1d6,PenetrationCalculation StrongCalc,Close,CalculatedEO Focused,1,TRUE,None
-Sphere,2,+0d6,PenetrationCalculation MediumCalc,Close,CalculatedEO Focused,2,TRUE,Sphere
+Melee Trick,-1,+0d6,WeakCalc,Melee,EOCalculation Rapid,0,FALSE,None
+Melee,0,+0d6,MediumCalc,Reach,EOCalculation Rapid,1,TRUE,None
+Ranged Trick,-1,+0d6,WeakCalc,Close,EOCalculation Standard,0,TRUE,None
+Ranged,0,+0d6,MediumCalc,Close,EOCalculation Standard,1,TRUE,None
+Cone,0,+0d6,MediumCalc,Close,CalculatedEO Focused,1,TRUE,Cone
+Focused,1,+1d6,StrongCalc,Close,CalculatedEO Focused,1,TRUE,None
+Sphere,2,+0d6,MediumCalc,Close,CalculatedEO Focused,2,TRUE,Sphere

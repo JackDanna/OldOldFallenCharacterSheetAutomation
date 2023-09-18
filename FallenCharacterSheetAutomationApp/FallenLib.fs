@@ -1,6 +1,13 @@
 ﻿namespace FallenLib
 
 // Util
+module StringUtils =
+    open System.Text.RegularExpressions
+
+    let isNumeric (number: string) =
+        let regex = Regex(@"^[0-9]+$")
+        regex.IsMatch(number)
+
 module MathUtils =
     open System
     let divideUintByUintThenRound numerator divisor roundDown =
@@ -82,6 +89,7 @@ module MapUtils =
 
 module Penetration =
     open MathUtils
+    open StringUtils
 
     type PenetrationCalculation = {
         desc               : string
@@ -115,13 +123,12 @@ module Penetration =
             |> (+) calculatedSecondaryPenetration
 
     let createPenetrationMap (penetrationCalculationMap:Map<string,PenetrationCalculation>) (str:string) =
-        if str.Contains("CalculatedPenetration ") then
-            str.Replace( "CalculatedPenetration ", "") 
-            |> uint
+        if isNumeric str then
+            uint str
             |> CalculatedPenetration
             
-        elif str.Contains("PenetrationCalculation") then
-            penetrationCalculationMap.Item (str.Replace( "PenetrationCalculation ", ""))
+        elif Map.containsKey str penetrationCalculationMap then
+            penetrationCalculationMap.Item str
             |> PenetrationCalculation
         else
             CalculatedPenetration 0u
