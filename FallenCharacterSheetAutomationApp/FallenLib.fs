@@ -364,8 +364,8 @@ module Dice =
         if dicePoolJSONString.Contains("+") then
             let str = dicePoolJSONString.Replace("+", "")
             AddDice <| stringToDicePool str
-        elif dicePoolJSONString.Contains("RemoveDice ") then
-            let removeDiceString = dicePoolJSONString.Replace("RemoveDice ", "")
+        elif dicePoolJSONString.Contains("-") then
+            let removeDiceString = dicePoolJSONString.Replace("-", "")
 
             match System.UInt32.TryParse(removeDiceString) with
             | (true, result) ->
