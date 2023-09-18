@@ -92,53 +92,53 @@ module Data =
     |]
 
     let magicCombatData = [|
-        ("Melee Trick",   -1, "AddDice 0d6", "PenetrationCalculation WeakCalc",   "Melee", "EOCalculation Rapid",    0u, false, "None")
-        ("Melee",          0, "AddDice 0d6", "PenetrationCalculation MediumCalc", "Reach", "EOCalculation Rapid",    1u, true,  "None")
-        ("Ranged Trick",  -1, "AddDice 0d6", "PenetrationCalculation WeakCalc",   "Close", "EOCalculation Standard", 0u, false, "None")
-        ("Ranged",         0, "AddDice 0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 1u, true,  "None")
-        ("Cone",           0, "AddDice 0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 1u, true,  "Cone")
-        ("Focused",        1, "AddDice 1d6", "PenetrationCalculation StrongCalc", "Close", "CalculatedEO Focused",   1u, true,  "None")
-        ("Sphere",         1, "AddDice 0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 2u, true,  "Sphere")
+        ("Melee Trick",   -1, "+0d6", "PenetrationCalculation WeakCalc",   "Melee", "EOCalculation Rapid",    0u, false, "None")
+        ("Melee",          0, "+0d6", "PenetrationCalculation MediumCalc", "Reach", "EOCalculation Rapid",    1u, true,  "None")
+        ("Ranged Trick",  -1, "+0d6", "PenetrationCalculation WeakCalc",   "Close", "EOCalculation Standard", 0u, false, "None")
+        ("Ranged",         0, "+0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 1u, true,  "None")
+        ("Cone",           0, "+0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 1u, true,  "Cone")
+        ("Focused",        1, "+1d6", "PenetrationCalculation StrongCalc", "Close", "CalculatedEO Focused",   1u, true,  "None")
+        ("Sphere",         1, "+0d6", "PenetrationCalculation MediumCalc", "Close", "EOCalculation Standard", 2u, true,  "Sphere")
     |]
 
     let weaponClassData = [|
-        ("Hand Crossbow",                     "AddDice 1d6",   "AddDice 1d6",  "CalculatedPenetration 0", "Medium",   "",              "EOCalculation Standard",               "None", "None", "Bolt","{STR,RFX,INT}")
-        ("Light Crossbow",                    "None",          "AddDice 1d6",  "CalculatedPenetration 0", "Extended", "",              "EOCalculation Loading",                "None", "None", "Bolt","{STR,RFX,INT}")
-        ("Heavy Crossbow",                    "None",          "AddDice 2d6",  "CalculatedPenetration 0", "Long",     "",              "EOCalculation Complex Loading",        "None", "None", "Bolt","{STR,RFX,INT}")
+        ("Hand Crossbow",                     "+1d6",   "+1d6",  "CalculatedPenetration 0", "Medium",   "",              "EOCalculation Standard",               "None", "None", "Bolt","{STR,RFX,INT}")
+        ("Light Crossbow",                    "None",          "+1d6",  "CalculatedPenetration 0", "Extended", "",              "EOCalculation Loading",                "None", "None", "Bolt","{STR,RFX,INT}")
+        ("Heavy Crossbow",                    "None",          "+2d6",  "CalculatedPenetration 0", "Long",     "",              "EOCalculation Complex Loading",        "None", "None", "Bolt","{STR,RFX,INT}")
         ("Light Ranged (Melee)",              "None",          "RemoveDice 1", "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Blowgun",                           "AddDice 0d6",   "AddDice 1d6",  "CalculatedPenetration 0", "Medium",   "",              "EOCalculation Standard",               "None", "None", "BlowgunDart","{STR,RFX,INT}")
+        ("Blowgun",                           "+0d6",   "+1d6",  "CalculatedPenetration 0", "Medium",   "",              "EOCalculation Standard",               "None", "None", "BlowgunDart","{STR,RFX,INT}")
         ("Unarmed",                           "RemoveDice 1",  "RemoveDice 1", "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Hand Protection Unarmed",           "AddDice 0d6",   "AddDice 0d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Disarming Unarmed",                 "AddDice 3d6",   "AddDice 3d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Disarming Hand Protection Unarmed", "AddDice 4d6",   "AddDice 4d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Small Hafted Axe",                  "AddDice 1d6",   "AddDice 1d6",  "CalculatedPenetration 0", "Melee",    "Hew",           "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Small Hafted Blade",                "AddDice 1d6",   "AddDice 1d6",  "CalculatedPenetration 0", "Melee",    "Slash",         "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Small Hafted Point",                "AddDice 1d6",   "AddDice 1d6",  "CalculatedPenetration 0", "Melee",    "Pierce",        "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Small Blunt",                       "AddDice 0d6",   "AddDice 0d6",  "CalculatedPenetration 2", "Melee",    "Bludgeon",      "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Small Bladed",                      "AddDice 0d6",   "AddDice 0d6",  "CalculatedPenetration 2", "Melee",    "Slash, Pierce", "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Thrown Small Bladed",               "AddDice 0d6",   "AddDice 0d6",  "CalculatedPenetration 1", "Short",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Medium Hafted Blade",               "AddDice 2d6",   "AddDice 3d6",  "CalculatedPenetration 0", "Melee",    "Hew",           "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Medium Hafted Point",               "AddDice 2d6",   "AddDice 3d6",  "CalculatedPenetration 0", "Melee",    "Pierce",        "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Medium Hafted Blunt",               "AddDice 0d6",   "AddDice 1d6",  "CalculatedPenetration 4", "Melee",    "Bludgeon",      "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Medium Sword",                      "AddDice 1d6",   "AddDice 2d6",  "CalculatedPenetration 2", "Melee",    "Slash, Pierce", "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Large Hafted Blade",                "AddDice 0d6",   "AddDice 3d6",  "CalculatedPenetration 2", "Melee",    "Hew",           "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Large Hafted Point",                "AddDice 0d6",   "AddDice 3d6",  "CalculatedPenetration 2", "Melee",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Large Hafted Blunt",                "RemoveDice 0",  "AddDice 1d6",  "CalculatedPenetration 5", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Large Sword",                       "AddDice 2d6",   "AddDice 2d6",  "CalculatedPenetration 3", "Melee",    "Slash, Pierce", "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Short Spear",                       "AddDice 1d6",   "AddDice 3d6",  "CalculatedPenetration 3", "Melee",    "Pierce",        "EOCalculation SpearRapid",      "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Reach Hafted Axe",                  "Remove 1",      "AddDice 4d6",  "CalculatedPenetration 3", "Reach",    "Hew",           "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Reach Hafted Blade",                "Remove 1",      "AddDice 4d6",  "CalculatedPenetration 3", "Reach",    "Slash",         "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Reach Hafted Point",                "Remove 1",      "AddDice 4d6",  "CalculatedPenetration 3", "Reach",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Reach Hafted Blunt",                "Remove 1",      "AddDice 2d6",  "CalculatedPenetration 3", "Reach",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Greatsword",                        "Remove 1",      "AddDice 3d6",  "CalculatedPenetration 4", "Reach",    "Slash, Pierce", "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Longspear",                         "Remove 1",      "AddDice 4d6",  "CalculatedPenetration 4", "Reach",    "Pierce",        "EOCalculation SpearRapid",             "None", "None", "None","{STR,RFX,INT}")
-        ("Whip",                              "AddDice 0d6",   "AddDice 0d6",  "CalculatedPenetration 0", "Reach",    "Slash",         "EOCalculation Rapid",           "AddDice 1d6", "None", "None","{STR,RFX,INT}")
-        ("Man Catcher",                       "Remove 3",      "AddDice 1d6",  "CalculatedPenetration 2", "Reach",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Hand Protection Unarmed",           "+0d6",   "+0d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Disarming Unarmed",                 "+3d6",   "+3d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Disarming Hand Protection Unarmed", "+4d6",   "+4d6",  "CalculatedPenetration 0", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Small Hafted Axe",                  "+1d6",   "+1d6",  "CalculatedPenetration 0", "Melee",    "Hew",           "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Small Hafted Blade",                "+1d6",   "+1d6",  "CalculatedPenetration 0", "Melee",    "Slash",         "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Small Hafted Point",                "+1d6",   "+1d6",  "CalculatedPenetration 0", "Melee",    "Pierce",        "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Small Blunt",                       "+0d6",   "+0d6",  "CalculatedPenetration 2", "Melee",    "Bludgeon",      "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Small Bladed",                      "+0d6",   "+0d6",  "CalculatedPenetration 2", "Melee",    "Slash, Pierce", "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Thrown Small Bladed",               "+0d6",   "+0d6",  "CalculatedPenetration 1", "Short",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Medium Hafted Blade",               "+2d6",   "+3d6",  "CalculatedPenetration 0", "Melee",    "Hew",           "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Medium Hafted Point",               "+2d6",   "+3d6",  "CalculatedPenetration 0", "Melee",    "Pierce",        "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Medium Hafted Blunt",               "+0d6",   "+1d6",  "CalculatedPenetration 4", "Melee",    "Bludgeon",      "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Medium Sword",                      "+1d6",   "+2d6",  "CalculatedPenetration 2", "Melee",    "Slash, Pierce", "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Large Hafted Blade",                "+0d6",   "+3d6",  "CalculatedPenetration 2", "Melee",    "Hew",           "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Large Hafted Point",                "+0d6",   "+3d6",  "CalculatedPenetration 2", "Melee",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Large Hafted Blunt",                "RemoveDice 0",  "+1d6",  "CalculatedPenetration 5", "Melee",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Large Sword",                       "+2d6",   "+2d6",  "CalculatedPenetration 3", "Melee",    "Slash, Pierce", "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Short Spear",                       "+1d6",   "+3d6",  "CalculatedPenetration 3", "Melee",    "Pierce",        "EOCalculation SpearRapid",      "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Reach Hafted Axe",                  "Remove 1",      "+4d6",  "CalculatedPenetration 3", "Reach",    "Hew",           "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Reach Hafted Blade",                "Remove 1",      "+4d6",  "CalculatedPenetration 3", "Reach",    "Slash",         "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Reach Hafted Point",                "Remove 1",      "+4d6",  "CalculatedPenetration 3", "Reach",    "Pierce",        "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Reach Hafted Blunt",                "Remove 1",      "+2d6",  "CalculatedPenetration 3", "Reach",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Greatsword",                        "Remove 1",      "+3d6",  "CalculatedPenetration 4", "Reach",    "Slash, Pierce", "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
+        ("Longspear",                         "Remove 1",      "+4d6",  "CalculatedPenetration 4", "Reach",    "Pierce",        "EOCalculation SpearRapid",             "None", "None", "None","{STR,RFX,INT}")
+        ("Whip",                              "+0d6",   "+0d6",  "CalculatedPenetration 0", "Reach",    "Slash",         "EOCalculation Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Man Catcher",                       "Remove 3",      "+1d6",  "CalculatedPenetration 2", "Reach",    "Bludgeon",      "EOCalculation Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         //("", "", "", "", "", "", "", "None", "None", "None")
     |]
 
     let conduitClassData = [|
-        ("Radiance Conduit", "AddDice 1d6", "AddDice 0d6", "CalculatedPenetration 0", 0, "", "None", "None", "None", "None","{STR,RFX,INT}")
+        ("Radiance Conduit", "+1d6", "+0d6", "CalculatedPenetration 0", 0, "", "None", "None", "None", "None","{STR,RFX,INT}")
     |]
 
     let itemTierData = [|
@@ -192,19 +192,19 @@ module Data =
 
     let weaponResourceClassData = [|
         // Arrows
-        ("Standard Arrow",              "Arrow",  "AddDice 1d6", 1u, "None",        "Pierce",  "None" )
-        ("Wounding Arrow",              "Arrow",  "AddDice 1d6", 1u, "None", "Pierce, Bleed",  "None" )
-        ("Anti-armor Arrow",            "Arrow",  "AddDice 1d6", 3u, "None",        "Pierce",  "None" )
-        ("Survival Arrow",              "Arrow",  "AddDice 1d4", 0u, "None",        "Pierce",  "None" )
+        ("Standard Arrow",              "Arrow",  "+1d6", 1u, "None",        "Pierce",  "None" )
+        ("Wounding Arrow",              "Arrow",  "+1d6", 1u, "None", "Pierce, Bleed",  "None" )
+        ("Anti-armor Arrow",            "Arrow",  "+1d6", 3u, "None",        "Pierce",  "None" )
+        ("Survival Arrow",              "Arrow",  "+1d4", 0u, "None",        "Pierce",  "None" )
         
         // Bolts
-        ("Anti-armor Bolt",             "Bolt",  "AddDice 1d6",  3u, "None",        "Pierce",  "None" )
-        ("Wounding Bolt",               "Bolt",  "AddDice 1d6",  1u, "None", "Pierce, Bleed",  "None" )
-        ("Broadhead Bolt",              "Bolt",  "AddDice 1d6",  1u, "None",        "Pierce",  "None" )
-        ("Survival Bolt",               "Bolt",  "AddDice 1d4",  0u, "None",        "Pierce",  "None" )
+        ("Anti-armor Bolt",             "Bolt",  "+1d6",  3u, "None",        "Pierce",  "None" )
+        ("Wounding Bolt",               "Bolt",  "+1d6",  1u, "None", "Pierce, Bleed",  "None" )
+        ("Broadhead Bolt",              "Bolt",  "+1d6",  1u, "None",        "Pierce",  "None" )
+        ("Survival Bolt",               "Bolt",  "+1d4",  0u, "None",        "Pierce",  "None" )
 
         // Sling Bullets
-        ("Standard SlingBullet", "SlingBullet",  "AddDice 1d6",  0u, "None",      "Bludgeon",  "None" )
+        ("Standard SlingBullet", "SlingBullet",  "+1d6",  0u, "None",      "Bludgeon",  "None" )
     |]
 
     let equipmentData = [|
