@@ -361,8 +361,8 @@ module Dice =
         |> combineDicePools
 
     let stringToDicePoolModification (dicePoolJSONString:string) : DicePoolModification =
-        if dicePoolJSONString.Contains("AddDice ") then
-            let str = dicePoolJSONString.Replace("AddDice ", "")
+        if dicePoolJSONString.Contains("+") then
+            let str = dicePoolJSONString.Replace("+", "")
             AddDice <| stringToDicePool str
         elif dicePoolJSONString.Contains("RemoveDice ") then
             let removeDiceString = dicePoolJSONString.Replace("RemoveDice ", "")
