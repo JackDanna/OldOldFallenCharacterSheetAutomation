@@ -14,6 +14,7 @@
       name = "FallenCharacterSheetAutomation";
       buildInputs = with pkgs; [
         dotnet-sdk_8
+        nodejs
         gnome.gnome-terminal
         netcoredbg
 	      bashInteractive
