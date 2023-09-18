@@ -14,9 +14,11 @@
       name = "FallenCharacterSheetAutomation";
       buildInputs = with pkgs; [
         dotnet-sdk_8
+        gnome.gnome-terminal
+        netcoredbg
 
         (vscode-with-extensions.override  {
-          vscode = pkgs.vscodium;
+          vscode = pkgs.vscode;
           vscodeExtensions = with pkgs.vscode-extensions; [
             ms-dotnettools.csharp
             jnoortheen.nix-ide
