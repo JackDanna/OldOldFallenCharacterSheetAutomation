@@ -7,5 +7,5 @@ Standard Bolt,Bolt,+1d6,1,None,Pierce,None
 Wounding Bolt,Bolt,+1d6,1,None,"Pierce, Bleed",None
 Anti-armor Bolt,Bolt,+1d6,3,None,Pierce,None
 Shoddy Bolt,Bolt,+1d4,0,None,Pierce,None
-Standard Sling Bullets,SlingBullet,+1d6,0,None,Bludgeon,None
-Poison Needles,BlowgunDart,+1d6,0,None,Poison,None
+Standard Sling Bullets,Sling Bullet,+1d6,0,None,Bludgeon,None
+Poison Needles,Blowgun Dart,+1d6,0,None,Poison,None

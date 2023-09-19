@@ -57,8 +57,8 @@ module Data =
     let resourceClassData = [|
         "Arrow"
         "Bolt"
-        "SlingBullet"
-        "BlowgunDart"
+        "Sling Bullet"
+        "Blowgun Dart"
         "Ichor"
         "Light"
         "Energy"
@@ -106,7 +106,7 @@ module Data =
         ("Light Crossbow",                    "None",          "+1d6",  "0", "Extended", "",              "Loading",                "None", "None", "Bolt","{STR,RFX,INT}")
         ("Heavy Crossbow",                    "None",          "+2d6",  "0", "Long",     "",              "Complex Loading",        "None", "None", "Bolt","{STR,RFX,INT}")
         ("Light Ranged (Melee)",              "None",          "-1", "0", "Melee",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Blowgun",                           "+0d6",   "+1d6",  "0", "Medium",   "",              "Standard",               "None", "None", "BlowgunDart","{STR,RFX,INT}")
+        ("Blowgun",                           "+0d6",   "+1d6",  "0", "Medium",   "",              "Standard",               "None", "None", "Blowgun Dart","{STR,RFX,INT}")
         ("Unarmed",                           "-1",  "-1", "0", "Melee",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Hand Protection Unarmed",           "+0d6",   "+0d6",  "0", "Melee",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Disarming Unarmed",                 "+3d6",   "+3d6",  "0", "Melee",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
@@ -182,7 +182,7 @@ module Data =
         ("Barbed Broadhead Bolt",         "Wounding Bolt", "Mundane",    "20",  0.0, "0 cc" )
         ("Broadhead Bolt",               "Broadhead Bolt", "Mundane",    "20",  0.0, "0 cc" )
         ("Wood Tipped Bolt",              "Survival Bolt", "Mundane",    "20",  0.0, "0 cc" )
-        ("Sling Bullet",           "Standard SlingBullet", "Mundane",    "50",  0.0, "0 cc" )
+        ("Sling Bullet",           "Standard Sling Bullet", "Mundane",    "50",  0.0, "0 cc" )
 
         // DefenseClass Items
         ("Gaembeson Jacket",               "Phy. Def. 0.5", "Mundane",    "20",  0.0, "0 cc" )
@@ -204,7 +204,7 @@ module Data =
         ("Survival Bolt",               "Bolt",  "+1d4",  0u, "None",        "Pierce",  "None" )
 
         // Sling Bullets
-        ("Standard SlingBullet", "SlingBullet",  "+1d6",  0u, "None",      "Bludgeon",  "None" )
+        ("Standard Sling Bullet", "Sling Bullet",  "+1d6",  0u, "None",      "Bludgeon",  "None" )
     |]
 
     let equipmentData = [|
