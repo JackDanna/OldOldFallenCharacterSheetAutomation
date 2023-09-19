@@ -14,11 +14,28 @@
     };
   in 
   {
-    packages.${system}.default = pkgs.writeShellScriptBin "transpileAndRollUp" ''
-      ${pkgs.dotnet-sdk}/bin/dotnet fable --lang js
-      ${pkgs.nodejs}/bin/npx rollup FallenLib.fs.js --file GoogleAppscript/FallenLibBundled.js --format cjs
-      sed -i '/^export./d' GoogleAppscript/FallenLibBundled.js
-    '';
+    packages.${system}.default = pkgs.stdenv.mkDerivation
+    {
+      name = "transpileAndRollUp";
+      src = ./FallenCharacterSheetAutomationApp;
+      dontUnpack = true; dontConfigure = true;
+      # finish building bringing nuget deps specificly we need fable:
+      # https://nixos.wiki/wiki/DotNET
+      buildInputs = with pkgs; [
+        dotnet-sdk
+        nodejs
+      ];
+
+      buildPhase = ''
+        dotnet fable --lang js
+        npx rollup FallenLib.fs.js --file GoogleAppscript/FallenLibBundled.js --format cjs
+        sed -i '/^export./d' GoogleAppscript/FallenLibBundled.js
+      '';
+      installPhase = ''
+        mkdir $out 
+        cp GoogleAppscript/* $out
+      '';
+    };
 
     devShells.${system}.default = pkgs.mkShell rec {
       name = "FallenCharacterSheetAutomation";
