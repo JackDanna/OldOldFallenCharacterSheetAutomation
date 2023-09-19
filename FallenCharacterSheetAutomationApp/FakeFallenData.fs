@@ -30,7 +30,7 @@ module Data =
     let calculatedEngageableOpponentsData = [| ("Focused", 1u) |]
 
     let engageableOpponentsCalculationData = [|
-        ("SpearRapid",      2u,  "MaxEO 2")
+        ("Spear Rapid",      2u,  "MaxEO 2")
         ("Rapid",           2u,  "None"   )
         ("Quick",           3u,  "None"   )
         ("Standard",        4u,  "None"   )
@@ -125,13 +125,13 @@ module Data =
         ("Large Hafted Point",                "+0d6",   "+3d6",  "2", "Melee",    "Pierce",        "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Large Hafted Blunt",                "-0",  "+1d6",  "5", "Melee",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Large Sword",                       "+2d6",   "+2d6",  "3", "Melee",    "Slash, Pierce", "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Short Spear",                       "+1d6",   "+3d6",  "3", "Melee",    "Pierce",        "SpearRapid",      "+1d6", "None", "None","{STR,RFX,INT}")
+        ("Short Spear",                       "+1d6",   "+3d6",  "3", "Melee",    "Pierce",        "Spear Rapid",      "+1d6", "None", "None","{STR,RFX,INT}")
         ("Reach Hafted Axe",                  "Remove 1",      "+4d6",  "3", "Reach",    "Hew",           "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Reach Hafted Blade",                "Remove 1",      "+4d6",  "3", "Reach",    "Slash",         "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Reach Hafted Point",                "Remove 1",      "+4d6",  "3", "Reach",    "Pierce",        "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Reach Hafted Blunt",                "Remove 1",      "+2d6",  "3", "Reach",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         ("Greatsword",                        "Remove 1",      "+3d6",  "4", "Reach",    "Slash, Pierce", "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
-        ("Longspear",                         "Remove 1",      "+4d6",  "4", "Reach",    "Pierce",        "SpearRapid",             "None", "None", "None","{STR,RFX,INT}")
+        ("Longspear",                         "Remove 1",      "+4d6",  "4", "Reach",    "Pierce",        "Spear Rapid",             "None", "None", "None","{STR,RFX,INT}")
         ("Whip",                              "+0d6",   "+0d6",  "0", "Reach",    "Slash",         "Rapid",           "+1d6", "None", "None","{STR,RFX,INT}")
         ("Man Catcher",                       "Remove 3",      "+1d6",  "2", "Reach",    "Bludgeon",      "Rapid",                  "None", "None", "None","{STR,RFX,INT}")
         //("", "", "", "", "", "", "", "None", "None", "None")
