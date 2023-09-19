@@ -1,5 +1,14 @@
 'use strict';
 
+// From http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+function escape(str) {
+    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+function isMatch(reg, input, startAt = 0) {
+    reg.lastIndex = startAt;
+    return reg.test(input);
+}
+
 // tslint:disable:ban-types
 function isArrayLike(x) {
     return Array.isArray(x) || ArrayBuffer.isView(x);
@@ -1728,11 +1737,6 @@ function toString(date, format, _provider) {
     return date.offset != null
         ? dateToStringWithOffset(date, format)
         : dateToStringWithKind(date, format);
-}
-
-// From http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
-function escape(str) {
-    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
 
 const fsFormatRegExp = /(^|[^%])%([0+\- ]*)(\*|\d+)?(?:\.(\d+))?(\w)/g;
@@ -3484,6 +3488,10 @@ function tryParse(str, style, unsigned, bitsize, defValue) {
     }
 }
 
+function StringUtils_isNumeric(number) {
+    return isMatch(/^[0-9]+$/gu, number);
+}
+
 function MathUtils_divideUintByUintThenRound(numerator, divisor, roundDown) {
     const floatCalculation = numerator / divisor;
     if (roundDown) {
@@ -3616,11 +3624,11 @@ function Penetration_determinePenetration(numDice, primaryPenetration, secondary
 }
 
 function Penetration_createPenetrationMap(penetrationCalculationMap, str) {
-    if (str.indexOf("CalculatedPenetration ") >= 0) {
-        return new Penetration_Penetration(1, [parse(replace(str, "CalculatedPenetration ", ""), 511, true, 32)]);
+    if (StringUtils_isNumeric(str)) {
+        return new Penetration_Penetration(1, [parse(str, 511, true, 32)]);
     }
-    else if (str.indexOf("PenetrationCalculation") >= 0) {
-        return new Penetration_Penetration(0, [FSharpMap__get_Item(penetrationCalculationMap, replace(str, "PenetrationCalculation ", ""))]);
+    else if (containsKey(str, penetrationCalculationMap)) {
+        return new Penetration_Penetration(0, [FSharpMap__get_Item(penetrationCalculationMap, str)]);
     }
     else {
         return new Penetration_Penetration(1, [0]);
@@ -3704,11 +3712,11 @@ const EngageableOpponents_createEOCalculationMap = (list) => MapUtils_createMapF
 const EngageableOpponents_createCalculatedEOMap = (list) => MapUtils_createMapFromTuple2List((tupledArg) => EngageableOpponents_createCalculatedEngageableOpponents(tupledArg[0], tupledArg[1]), list);
 
 function EngageableOpponents_createEOInterface(calculatedEOMap, eoCalculationMap, input) {
-    if (input.indexOf("EOCalculation ") >= 0) {
-        return new EngageableOpponents_EngageableOpponents(0, [FSharpMap__get_Item(eoCalculationMap, replace(input, "EOCalculation ", ""))]);
+    if (containsKey(input, calculatedEOMap)) {
+        return new EngageableOpponents_EngageableOpponents(1, [FSharpMap__get_Item(calculatedEOMap, input)]);
     }
-    else if (input.indexOf("CalculatedEO ") >= 0) {
-        return new EngageableOpponents_EngageableOpponents(1, [FSharpMap__get_Item(calculatedEOMap, replace(input, "CalculatedEO ", ""))]);
+    else if (containsKey(input, eoCalculationMap)) {
+        return new EngageableOpponents_EngageableOpponents(0, [FSharpMap__get_Item(eoCalculationMap, input)]);
     }
     else {
         return new EngageableOpponents_EngageableOpponents(1, [0]);
@@ -3919,13 +3927,13 @@ function Dice_stringToDicePool(str) {
 }
 
 function Dice_stringToDicePoolModification(dicePoolJSONString) {
-    if (dicePoolJSONString.indexOf("AddDice ") >= 0) {
-        return new Dice_DicePoolModification(0, [Dice_stringToDicePool(replace(dicePoolJSONString, "AddDice ", ""))]);
+    if (dicePoolJSONString.indexOf("+") >= 0) {
+        return new Dice_DicePoolModification(0, [Dice_stringToDicePool(replace(dicePoolJSONString, "+", ""))]);
     }
-    else if (dicePoolJSONString.indexOf("RemoveDice ") >= 0) {
+    else if (dicePoolJSONString.indexOf("-") >= 0) {
         let matchValue;
         let outArg = 0;
-        matchValue = [tryParse(replace(dicePoolJSONString, "RemoveDice ", ""), 511, true, 32, new FSharpRef(() => outArg, (v) => {
+        matchValue = [tryParse(replace(dicePoolJSONString, "-", ""), 511, true, 32, new FSharpRef(() => outArg, (v) => {
             outArg = v;
         })), outArg];
         if (matchValue[0]) {
