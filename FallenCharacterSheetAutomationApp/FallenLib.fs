@@ -156,6 +156,7 @@ module EngageableOpponents =
 
     open MathUtils
     open MapUtils
+    open StringUtils
 
     type EngageableOpponentsCalculation = {
         desc              : string
@@ -198,12 +199,13 @@ module EngageableOpponents =
     let createEOInterface (calculatedEOMap:Map<string,CalculatedEngageableOpponents>) 
                     (eoCalculationMap:Map<string,EngageableOpponentsCalculation>) 
                     (input:string) =
-        if input.Contains "EOCalculation " then
-            eoCalculationMap.Item (input.Replace("EOCalculation ", ""))
-            |> Calculation
-        elif input.Contains "CalculatedEO " then
-            calculatedEOMap.Item (input.Replace("CalculatedEO ", ""))
+
+        if Map.containsKey input calculatedEOMap then
+            calculatedEOMap.Item input
             |> Calculated
+        elif Map.containsKey input eoCalculationMap then
+            eoCalculationMap.Item input
+            |> Calculation
         else
             Calculated 0u
 
