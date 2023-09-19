@@ -16,7 +16,7 @@
   {
     packages.${system}.default = pkgs.writeShellScriptBin "transpileAndRollUp" ''
       ${pkgs.dotnet-sdk}/bin/dotnet fable --lang js
-      ${pkgs.node-js}/bin/npx rollup FallenLib.fs.js --file GoogleAppscript/FallenLibBundled.js --format cjs
+      ${pkgs.nodejs}/bin/npx rollup FallenLib.fs.js --file GoogleAppscript/FallenLibBundled.js --format cjs
       sed -i '/^export./d' GoogleAppscript/FallenLibBundled.js
     '';
 
