@@ -22,9 +22,9 @@ module Data =
     |]
 
     let penetrationCalculationData = [|
-        ("WeakCalc",   8u)
-        ("MediumCalc", 4u)
-        ("StrongCalc", 3u)
+        ("Weak",   8u)
+        ("Medium", 4u)
+        ("Strong", 3u)
     |]
 
     let calculatedEngageableOpponentsData = [| ("Focused", 1u) |]
@@ -92,13 +92,13 @@ module Data =
     |]
 
     let magicCombatData = [|
-        ("Melee Trick",   -1, "+0d6", "WeakCalc",   "Melee", "Rapid",    0u, false, "None")
-        ("Melee",          0, "+0d6", "MediumCalc", "Reach", "Rapid",    1u, true,  "None")
-        ("Ranged Trick",  -1, "+0d6", "WeakCalc",   "Close", "Standard", 0u, false, "None")
-        ("Ranged",         0, "+0d6", "MediumCalc", "Close", "Standard", 1u, true,  "None")
-        ("Cone",           0, "+0d6", "MediumCalc", "Close", "Standard", 1u, true,  "Cone")
-        ("Focused",        1, "+1d6", "StrongCalc", "Close", "Focused",   1u, true,  "None")
-        ("Sphere",         1, "+0d6", "MediumCalc", "Close", "Standard", 2u, true,  "Sphere")
+        ("Melee Trick",   -1, "+0d6", "Weak",   "Melee", "Rapid",    0u, false, "None")
+        ("Melee",          0, "+0d6", "Medium", "Reach", "Rapid",    1u, true,  "None")
+        ("Ranged Trick",  -1, "+0d6", "Weak",   "Close", "Standard", 0u, false, "None")
+        ("Ranged",         0, "+0d6", "Medium", "Close", "Standard", 1u, true,  "None")
+        ("Cone",           0, "+0d6", "Medium", "Close", "Standard", 1u, true,  "Cone")
+        ("Focused",        1, "+1d6", "Strong", "Close", "Focused",   1u, true,  "None")
+        ("Sphere",         1, "+0d6", "Medium", "Close", "Standard", 2u, true,  "Sphere")
     |]
 
     let weaponClassData = [|
