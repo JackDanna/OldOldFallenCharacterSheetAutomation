@@ -178,9 +178,8 @@ module EngageableOpponents =
             divideUintsThenCompareToMaxThenRound numDice eoCalculation.combatRollDivisor eoCalculation.maxEO true
 
     let mapMaxEO (input:string) =
-        if input.Contains("MaxEO ") then
-            input.Replace("MaxEO ", "")
-            |> uint
+        if isNumeric input then
+            uint input
             |> Some
         else
           None
