@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "global": "^4.4.0",
     "rollup": "^3.29.2"
