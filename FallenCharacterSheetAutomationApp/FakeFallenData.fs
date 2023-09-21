@@ -30,7 +30,7 @@ module Data =
     let calculatedEngageableOpponentsData = [| ("Focused", 1u) |]
 
     let engageableOpponentsCalculationData = [|
-        ("Spear Rapid",      2u,  "MaxEO 2")
+        ("Spear Rapid",      2u,  "2")
         ("Rapid",           2u,  "None"   )
         ("Quick",           3u,  "None"   )
         ("Standard",        4u,  "None"   )
