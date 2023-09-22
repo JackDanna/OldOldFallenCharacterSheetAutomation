@@ -46,3 +46,8 @@ Bite,+1d6,+1d6,2,Melee,"Pierce, Bludgeon",Rapid,None,None,None,"{STR,RFX,INT}"
 Stomp (Large),+1d6,+1d6,5,Melee,Bludgeon,Rapid,None,None,None,"{STR,RFX,INT}"
 Stomp (Medium),+1d6,+1d6,4,Melee,Bludgeon,Rapid,None,None,None,"{STR,RFX,INT}"
 Horns (Medium),+1d6,+1d6,0,Melee,Pierce,Rapid,None,None,None,"{STR,RFX,INT}"
+,,,,,,,,,,
+Glock 17,+2d6,+2d6,0,Medium,,Quick,+1d6,None,9mm Ammo,"{STR,RFX,INT}"
+AR-15,+2d6,+4d6,0,Long,,Quick,None,None,5.56 Ammo,"{STR,RFX,INT}"
+Bolt Action .308 Rifle,+1d6,+4d6,0,Sharpshooter,,Standard,None,None,.308 Ammo,"{STR,RFX,INT}"
+RPG Launcher,-2,+6d6,0,Long,,Loading,None,None,RPG Ammo,"{STR,RFX,INT}"
