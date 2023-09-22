@@ -40,11 +40,11 @@ Crowbar,Small Hafted Blunt,Mundane,12/12,5,2 bc,1
 Hammer,Small Hafted Blunt,Mundane,12/12,3,1 bc,1
 "Hammer, Sledge",Large Hafted Blunt,Mundane,12/12,10,2 bc,1
 "Pick, Miner's",Large Hafted Point,Mundane,12/12,10,2 bc,1
-Light Crossbow,"Light Crossbow, Light Bow/Crossbow (Melee)",Mundane,12/12,5,25 bc,1
-Shortbow,"Light Bow, Light Bow/Crossbow (Melee)",Mundane,12/12,2,25 bc,1
-Hand Crossbow,"Hand Crossbow, Light Bow/Crossbow (Melee)",Mundane,12/12,3,75 bc,1
-Heavy Crossbow,"Heavy Crossbow, Heavy Bow/Crossbow (Melee)",Mundane,12/12,11,50 bc,1
-Longbow,"Heavy Bow, Heavy Bow/Crossbow (Melee)",Mundane,12/12,4,50 bc,1
+Light Crossbow,"Light Crossbow",Mundane,12/12,5,25 bc,1
+Shortbow,"Light Bow",Mundane,12/12,2,25 bc,1
+Hand Crossbow,"Hand Crossbow",Mundane,12/12,3,75 bc,1
+Heavy Crossbow,"Heavy Crossbow",Mundane,12/12,11,50 bc,1
+Longbow,"Heavy Bow",Mundane,12/12,4,50 bc,1
 Sling,Sling,Mundane,12/12,0.5,20 cc,1
 Quarterstaff,Large Hafted Blunt,Mundane,12/12,4,20 cc,1
 Club,Med. Hafted Blunt,Mundane,12/12,2,10 cc,1
@@ -77,7 +77,7 @@ Asher’s Arms Bollock Dagger,"Small Bladed, Thrown Small Pointed",Superior,24/2
 Spencer's Arms Arming Sword,Med. Sword,Superior,24/24,2,20 bc,1
 Dragon Torch,"Med. Torch, Blazecraft Conduit",Artifact,48/48,3,9999 bc,1
 Shovel,Med. Hafted Blunt,Shoddy,9/9,5,2 bc,1
-Excellent Shortbow,"Light Bow, Light Bow/Crossbow (Melee)",Excellent,21/21,2,25 bc,1
+Excellent Shortbow,"Light Bow",Excellent,21/21,2,25 bc,1
 Quality Rapier,Med. Sword,Mundane,12/12,2,14 bc,1
 Quality Swordbreaker,Small Bladed,Mundane,12/12,1,28 bc,1
 Torch,Torch,Shoddy,9/9,1,1 cc,1
