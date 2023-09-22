@@ -26,6 +26,13 @@
             jnoortheen.nix-ide
             ionide.ionide-fsharp
             mhutchie.git-graph
+          ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+              name = "vscode-edit-csv";
+              publisher = "janisdd";
+              version = "0.8.2";
+              sha256 = "sha256-DbAGQnizAzvpITtPwG4BHflUwBUrmOWCO7hRDOr/YWQ=";
+            }
           ];
         })
       ];
