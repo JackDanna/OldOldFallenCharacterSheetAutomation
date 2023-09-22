@@ -3690,8 +3690,8 @@ function EngageableOpponents_determineEngageableOpponents(numDice, engageableOpp
 }
 
 function EngageableOpponents_mapMaxEO(input) {
-    if (input.indexOf("MaxEO ") >= 0) {
-        return parse(replace(input, "MaxEO ", ""), 511, true, 32);
+    if (StringUtils_isNumeric(input)) {
+        return parse(input, 511, true, 32);
     }
     else {
         return void 0;
