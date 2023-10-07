@@ -1,13 +1,13 @@
 desc,itemClasses,itemTier,durability,weight,value,quantity
-Copper Coin,Misc,Mundane,,0.02, 1 cc,1
-Bronze Coin,Misc,Mundane,,0.02, 1 bc,1
-Gold Coin,Misc,Mundane,,0.02, 1 gc,1
-Platinum Coin,Misc,Mundane,,0.02, 1 pc,1
+Copper Coin,Misc,Mundane,,0.02," 1 cc",1
+Bronze Coin,Misc,Mundane,,0.02," 1 bc",1
+Gold Coin,Misc,Mundane,,0.02," 1 gc",1
+Platinum Coin,Misc,Mundane,,0.02," 1 pc",1
 ,,,,,,
 Unarmed,Unarmed,Mundane,12/12,0,0 bc,1
 Unarmed Disarming,Disarming Unarmed,Mundane,12/12,0,0 bc,1
 Dagger,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Mundane,12/12,1,2 bc,1
-Shortsword,"Small Thrusting Point, Small Slashing Blade",Mundane,12/12,1.5,10 bc,1
+Shortsword,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Mundane,12/12,1.5,10 bc,1
 Handaxe,Small Hafted Blade,Mundane,12/12,2,10 bc,1
 Sickle,Small Hafted Blade,Mundane,12/12,2,5 bc,1
 Light Hammer,Small Hafted Blunt,Mundane,12/12,2,1 bc,1
@@ -52,8 +52,8 @@ Great Club,Large Hafted Blunt,Mundane,12/12,10,20 cc,1
 Whip,Whip,Mundane,12/12,3,2 bc,1
 Plumbata/Dart,Thrown Small Point,Mundane,12/12,5,5 cc,1
 Blowgun,Blowgun,Mundane,12/12,1,10 bc,1
-Asher’s Arms Swordbreaker,"Small Thrusting Point, Small Slashing Blade",Fine,18/18,1,?,1
-Talon - Practice,"Small Thrusting Point, Small Slashing Blade",Quality,15/15,1.5,?,1
+Asher’s Arms Swordbreaker,"Small Thrusting Point, Small Slashing Blade, Thrown Small Blade",Fine,18/18,1,?,1
+Talon - Practice,"Small Thrusting Point, Small Slashing Blade, Thrown Small Blade",Quality,15/15,1.5,?,1
 Fang - Practice,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Quality,15/15,1,?,1
 Sirius’s Sword,Med. Sword,Fine,18/18,2,?,1
 Monkey Staff,Med. Hafted Blunt,Excellent,21/21,4,?,1
@@ -69,7 +69,7 @@ Adversary - Damaged,Radiance Conduit,Fine,18/18,1,?,1
 Sharp Cap,Small Slashing Blade,Shoddy,9/9,0.5,2 bc,1
 Fine Arming Sword,Med. Sword,Fine,18/18,2,?,1
 Net,Medium Sword,Mundane,12/12,3,1 bc,1
-Bodkin Knife,"Small Thrusting Point, Small Slashing Blade",Mundane,12/12,1,2 bc,1
+Bodkin Knife,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Mundane,12/12,1,2 bc,1
 Quality Warhammer/pick,"Med. Hafted Blunt, Med. Hafted Point",Quality,15/15,4,?,1
 Quality War Axe,Large Hafted Blade,Quality,15/15,5,5 bc,1
 War Axe,Large Hafted Blade,Mundane,12/12,5,5 bc,1
