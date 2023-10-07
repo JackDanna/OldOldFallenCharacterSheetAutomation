@@ -92,15 +92,15 @@ module Data =
         makeFallenData
             "MagicCombatData.csv"
             (fun row -> (
-                string     row.["desc"],
-                int        row.["lvlRequirment"],
-                string     row.["diceModification"],
-                string     row.["penetration"],
-                string     row.["range"],
-                string     row.["engageableOpponents"],
-                uint       row.["minResourceRequirment"],
-                Bool       row.["canVocationAssist"],
-                string     row.["areaOfEffect"]
+                string     row.["Description"],
+                int        row.["Lvl Requirment"],
+                string     row.["Dice Modification"],
+                string     row.["Penetration"],
+                string     row.["Range"],
+                string     row.["Engageable Opponents"],
+                uint       row.["Resource Requirment"],
+                Bool       row.["Vocation Assistable"],
+                string     row.["Area Of Effect"]
             ))
 
     let weaponClassData =
