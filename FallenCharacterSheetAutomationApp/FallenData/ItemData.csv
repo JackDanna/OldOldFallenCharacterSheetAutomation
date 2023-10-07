@@ -6,7 +6,7 @@ Platinum Coin,Misc,Mundane,,0.02," 1 pc",1
 ,,,,,,
 Unarmed,Unarmed,Mundane,12/12,0,0 bc,1
 Unarmed Disarming,Disarming Unarmed,Mundane,12/12,0,0 bc,1
-Dagger,"Small Thrusting Point, Small Slashing Blade, Thrown Small Bladed",Mundane,12/12,1,2 bc,1
+Dagger,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Mundane,12/12,1,2 bc,1
 Shortsword,"Small Thrusting Point, Small Slashing Blade",Mundane,12/12,1.5,10 bc,1
 Handaxe,Small Hafted Blade,Mundane,12/12,2,10 bc,1
 Sickle,Small Hafted Blade,Mundane,12/12,2,5 bc,1
@@ -50,11 +50,11 @@ Quarterstaff,Large Hafted Blunt,Mundane,12/12,4,20 cc,1
 Club,Med. Hafted Blunt,Mundane,12/12,2,10 cc,1
 Great Club,Large Hafted Blunt,Mundane,12/12,10,20 cc,1
 Whip,Whip,Mundane,12/12,3,2 bc,1
-Plumbata/Dart,Thrown Small Pointed,Mundane,12/12,5,5 cc,1
+Plumbata/Dart,Thrown Small Point,Mundane,12/12,5,5 cc,1
 Blowgun,Blowgun,Mundane,12/12,1,10 bc,1
 Asher’s Arms Swordbreaker,"Small Thrusting Point, Small Slashing Blade",Fine,18/18,1,?,1
 Talon - Practice,"Small Thrusting Point, Small Slashing Blade",Quality,15/15,1.5,?,1
-Fang - Practice,"Small Thrusting Point, Small Slashing Blade, Thrown Small Pointed",Quality,15/15,1,?,1
+Fang - Practice,"Small Thrusting Point, Small Slashing Blade, Thrown Small Point",Quality,15/15,1,?,1
 Sirius’s Sword,Med. Sword,Fine,18/18,2,?,1
 Monkey Staff,Med. Hafted Blunt,Excellent,21/21,4,?,1
 Hew,Med. Hafted Axe,Excellent,21/21,4,?,1
@@ -73,7 +73,7 @@ Bodkin Knife,"Small Thrusting Point, Small Slashing Blade",Mundane,12/12,1,2 bc,
 Quality Warhammer/pick,"Med. Hafted Blunt, Med. Hafted Point",Quality,15/15,4,?,1
 Quality War Axe,Large Hafted Blade,Quality,15/15,5,5 bc,1
 War Axe,Large Hafted Blade,Mundane,12/12,5,5 bc,1
-Asher’s Arms Bollock Dagger,"Small Bladed, Thrown Small Pointed",Superior,24/24,1,10 bc,1
+Asher’s Arms Bollock Dagger,"Small Bladed, Thrown Small Point",Superior,24/24,1,10 bc,1
 Spencer's Arms Arming Sword,Med. Sword,Superior,24/24,2,20 bc,1
 Dragon Torch,"Med. Torch, Blazecraft Conduit",Artifact,48/48,3,9999 bc,1
 Shovel,Med. Hafted Blunt,Shoddy,9/9,5,2 bc,1
@@ -81,7 +81,7 @@ Excellent Shortbow,Light Bow,Excellent,21/21,2,25 bc,1
 Quality Rapier,Med. Sword,Mundane,12/12,2,14 bc,1
 Quality Swordbreaker,Small Slashing Blade,Mundane,12/12,1,28 bc,1
 Torch,Torch,Shoddy,9/9,1,1 cc,1
-Shiv,"Small Thrusting Point, Thrown Small Bladed",Shoddy,9/9,1,70 cc,1
+Shiv,"Small Thrusting Point, Thrown Small Point",Shoddy,9/9,1,70 cc,1
 Shoddy Club,Med. Hafted Blunt,Shoddy,9/9,2,10 cc,1
 ,,,,,,
 Claws (Large),Claws (Large),Mundane,,0,None,1
