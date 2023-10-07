@@ -1,8 +1,8 @@
 desc,itemClasses,itemTier,durability,weight,value,quantity
-Copper Coin,Misc,Mundane,,0.02," 1 cc",1
-Bronze Coin,Misc,Mundane,,0.02," 1 bc",1
-Gold Coin,Misc,Mundane,,0.02," 1 gc",1
-Platinum Coin,Misc,Mundane,,0.02," 1 pc",1
+Copper Coin,Misc,Mundane,,0.02, 1 cc,1
+Bronze Coin,Misc,Mundane,,0.02, 1 bc,1
+Gold Coin,Misc,Mundane,,0.02, 1 gc,1
+Platinum Coin,Misc,Mundane,,0.02, 1 pc,1
 ,,,,,,
 Unarmed,Unarmed,Mundane,12/12,0,0 bc,1
 Unarmed Disarming,Disarming Unarmed,Mundane,12/12,0,0 bc,1
@@ -196,8 +196,6 @@ Blessed Water (flask),Misc,Mundane,,1,25 bc,1
 Incense (1 block),Misc,Mundane,,0.1,1 cc,1
 Ink (1 ounce bottle),Misc,Mundane,,0.1,10 bc,1
 Ink Pen (Fountain),Misc,Mundane,,0.05,3 bc,1
-Lamp,Misc,Mundane,,1,50 cc,1
-"Lantern, Hooded",Misc,Mundane,,2,5 bc,1
 Oil (flask),Misc,Mundane,,1,10 cc,1
 Paper (one sheet),Misc,Mundane,,0,20 cc,1
 Parchment (one sheet),Misc,Mundane,,0,10 cc,1
@@ -227,7 +225,6 @@ Barrel,Misc,Mundane,,70,2 bc,1
 Blanket,Misc,Mundane,,2,50 cc,1
 "Bottle, glass",Misc,Mundane,,2,2 bc,1
 Bucket,Misc,Mundane,,2,5 bc,1
-Candle,Misc,Mundane,,0.1,1 cc,1
 "Chest (12 ft^3, 300 lb capacity)",Misc,Mundane,,25,5 bc,1
 "Clothes, Common",Misc,Mundane,,3,5 bc,1
 "Clothes, Fine",Misc,Mundane,,6,15 bc,1
@@ -238,9 +235,7 @@ Flask or Tankard,Misc,Mundane,,1,2 cc,1
 Jug or PitcherJug or Pitcher,Misc,Mundane,,4,2 cc,1
 Ladder (10-foot),Misc,Mundane,,25,10 cc,1
 String (10 feet),Misc,Mundane,,0,1 cc,1
-Lock,Misc,Mundane,,1,10 bc,1
 Mess Kit,Misc,Mundane,,1,20 cc,1
-"Mirror, Steel",Misc,Mundane,,0.5,5 bc,1
 "Pot, Iron",Misc,Mundane,,10,2 bc,1
 "Pouch ( 1/5 ft^3, 6 lb capacity)",Misc,Mundane,,1,50 cc,1
 "Rope, Hempen (50 feet)",Misc,Mundane,,10,1 bc,1
@@ -265,9 +260,7 @@ Block and Tackle,Misc,Mundane,,5,1 bc,1
 Chain (10 feet),Misc,Mundane,,10,5 bc,1
 Climber's Kit,Misc,Mundane,,12,25 bc,1
 "Clothes, Traveler's",Misc,Mundane,,4,2 bc,1
-Grappling Hook,Misc,Mundane,,4,2 bc,1
 Hourglass,Misc,Mundane,,1,25 bc,1
-Hunting Trap,Misc,Mundane,,25,5 bc,1
 Piton,Misc,Mundane,,0.25,5 cc,1
 Pole (10-foot),Misc,Mundane,,7,5 cc,1
 Signal Whistle,Misc,Mundane,,0.1,5 bc,1
@@ -284,7 +277,6 @@ Acid (vial),Misc,Mundane,,0.5,25 bc,1
 Antitoxin (vial),Misc,Mundane,,0.5,50 bc,1
 Bag of Caltrops,Misc,Mundane,,2,1 bc,20
 "Clothes, Costume",Misc,Mundane,,4,5 bc,1
-Manacles,Misc,Mundane,,6,2 bc,1
 "Poison, Basic (vial)",Misc,Mundane,,0.5,100 bc,1
 "Ram, Portable",Misc,Mundane,,35,4 bc,1
 "Spikes, Iron",Misc,Mundane,,5,1 bc,10
@@ -317,7 +309,6 @@ Basket,Misc,Mundane,,2,40 cc,1
 "Cloak, Leather",Misc,Mundane,,5,2 bc,1
 "Cloak, Leather, Lined",Misc,Mundane,,5,4 bc,1
 Robes,Misc,Mundane,,4,1 bc,1
-Sack,Misc,Mundane,,0.5,1 cc,1
 Bone Needle,Misc,Mundane,,0,3 cc,5
 Steel Needle,Misc,Mundane,,0,10 cc,1
 Cotton Thread (30 feet),Misc,Mundane,,0.1,50 cc,1
@@ -397,31 +388,21 @@ Ruby (Shades of red),Misc,Mundane,,0.1,5000 bc,1
 5000 bc Gemstones,Misc,Mundane,,0.1,5000 bc,1
 Alchemist's Fire (flask),Misc,Mundane,,1,50 bc,1
 Antitoxin (vial),Misc,Mundane,,0.25,50 bc,1
-Oil (flask),Misc,Mundane,,1,10 cc,1
-Perfume (vial),Misc,Mundane,,0.1,5 bc,1
-"Poison, Basic (vial)",Misc,Mundane,,0.5,100 bc,1
-Vial,Misc,Mundane,,0.1,1 bc,1
 Alchemy Ingredient - Uncommon,Misc,Mundane,,0.5,1 bc,1
 Alchemy Ingredient - Rare,Misc,Mundane,,0.5,10 bc,1
 Alchemy Ingredient - Very Rare,Misc,Mundane,,0.5,30 bc,1
 Alchemist's Supplies,Misc,Mundane,,8,50 bc,1
 Brewer's Supplies,Misc,Mundane,,9,20 bc,1
-Cook's Utensils,Misc,Mundane,,8,1 bc,1
-Poisoner's Kit,Misc,Mundane,,2,50 bc,1
 Potion - Common,Misc,Mundane,,0.25,50 bc,1
 Potion - Uncommon,Misc,Mundane,,0.25,250 bc,1
 Potion - Rare,Misc,Mundane,,0.25,2500 bc,1
 Potion - Very Rare,Misc,Mundane,,0.25,12500 bc,1
 Potion - Legendary,Misc,Mundane,,0.25,62500 bc,1
 Spell Components,Misc,Mundane,,0.5,??,1
-"Bottle, glass",Misc,Mundane,,2,2 bc,1
-Candle,Misc,Mundane,,0.1,1 cc,1
-"Case, Map or Scroll",Misc,Mundane,,1,1 bc,1
 Druidic Focus - Sprig of Mistletoe,Misc,Mundane,,0.5,1 bc,1
 Druidic Focus - Totem,Misc,Mundane,,1,1 bc,1
 Druidic Focus - Wooden Staff,Misc,Mundane,,4,5 bc,1
 Druidic Focus - Yew Wand,Misc,Mundane,,1,10 bc,1
-Hourglass,Misc,Mundane,,1,25 bc,1
 “Meat” Stick,Misc,Mundane,,0.25,3 cc,1
 Roasted Locusts,Misc,Mundane,,0.25,3 cc,1
 Cheese Omelet,Misc,Mundane,,0.25,4 cc,1
@@ -543,7 +524,7 @@ Cosmetic: Lining (Material Options): Fur,Misc,Mundane,,0,3 bc,1
 Cosmetic: Lining (Material Options): Leather (Basic),Misc,Mundane,,0,4 bc,1
 Cosmetic: Lining (Material Options): Leather (Specialty),Misc,Mundane,,0,(+)CR% N.,1
 Cosmetic: Lining (Material Options): Silk,Misc,Mundane,,0,3 bc,1
-Cosmetic:  Pockets,Misc,Mundane,,0,20 cc,1
+Cosmetic: Pockets,Misc,Mundane,,0,20 cc,1
 Cosmetic: Bracers,Misc,Mundane,,0,50 cc,1
 Cosmetic: Breastplate,Misc,Mundane,,0,3 bc,1
 Cosmetic: Cuisse (Thigh Armor),Misc,Mundane,,0,1 bc,1
@@ -557,7 +538,7 @@ Cosmetic: Helmet,Misc,Mundane,,0,2 bc,1
 Cosmetic: Pauldrons (Shoulders),Misc,Mundane,,0,1 bc,1
 Cosmetic: Sabatons (Feet),Misc,Mundane,,0,50 cc,1
 Cosmetic: Buckler (1 Unit),Misc,Mundane,,0,8 bc,1
-Cosmetic:  Sheathe (See Unit Note),Misc,Mundane,,0,80 cc,1
+Cosmetic: Sheathe (See Unit Note),Misc,Mundane,,0,80 cc,1
 Adamantite,Misc,Mundane,,1,200 bc,1
 Aero Crystal,Misc,Mundane,,1,400 bc,1
 Asmoroch Wood,Misc,Mundane,,1,400 bc,1
@@ -584,11 +565,11 @@ Shadowsilk (CR Values),Misc,Mundane,,1,CR% N.,1
 Shadowfell Linen,Misc,Mundane,,1,800 bc,1
 Spiritual Wood,Misc,Mundane,,1,200 bc,1
 Stellar Iron,Misc,Mundane,,1,800 bc,1
-Magic Scroll:  Common,Misc,Mundane,,1,?,1
-Magic Scroll:  Uncommon,Misc,Excellent,,1,?,1
+Magic Scroll: Common,Misc,Mundane,,1,?,1
+Magic Scroll: Uncommon,Misc,Excellent,,1,?,1
 Magic Scroll: Rare,Misc,Flawless,,1,?,1
 Magic Scroll: Very Rare,Misc,Epic,,1,?,1
-Magic Scroll:  Legendary,Misc,Legendary,,1,?,1
+Magic Scroll: Legendary,Misc,Legendary,,1,?,1
 Scroll of Alert - CL 1,Misc,Excellent,,1,50-100,1
 Scroll of Slow Fall - CL 1,Misc,Excellent,,1,50-100,1
 Scroll of Oil Spill - CL 1,Misc,Excellent,,1,50-100,1
