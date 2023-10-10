@@ -273,7 +273,7 @@ module Data =
 
     let vocationalSkill3Data = [|
         //("Blazecraft", 4)
-        ("Radiance", 1)
+        ("Fire Rune", 1)
     |]
 
     let vocationDataArray = [|
