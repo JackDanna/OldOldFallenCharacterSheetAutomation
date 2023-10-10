@@ -810,6 +810,11 @@ module MagicCombat =
         areaOfEffect          : AreaOfEffect option
     }
 
+    let isMeleeOrReachRange (magicCombatCalculatedRange:CalculatedRange) =
+        match magicCombatCalculatedRange.desc with
+        | "Melee" | "Reach" -> true
+        | _ -> false
+
     let determineMagicCombatTypes (meleeCapable:bool) (lvl:Neg1To4) (magicCombatList:MagicCombat []) =
         // Logic for filtering by Lvl requirement
         Array.filter (fun (magicCombat:MagicCombat) -> 
@@ -818,12 +823,11 @@ module MagicCombat =
             (skillLvl >= requirementLvl)
         ) magicCombatList
         // Logic for filtering by if it can melee
-        |> Array.filter (fun (magicCombat:MagicCombat) -> 
-            let isMelee = (magicCombat.desc = "Melee") || (magicCombat.desc = "Melee Trick")
-            if isMelee && not meleeCapable then
-                false
-            else
-                true
+        |> Array.filter (fun (magicCombat:MagicCombat) ->
+            match magicCombat.range with
+            | CalculatedRange magicCombatCalculatedRange ->
+                not (isMeleeOrReachRange magicCombatCalculatedRange && not meleeCapable)
+            | _ -> true
         )
         |> Array.map ( fun (magicCombat:MagicCombat) -> magicCombat.desc) 
 
