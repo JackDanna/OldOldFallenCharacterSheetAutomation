@@ -3,7 +3,7 @@ Radiance,Radiant,0,TRUE,Light
 Blessing,Radiant,0,TRUE,Light
 Polycraft,"Slash, Bludgeon, Hew, Pierce",0,TRUE,Ichor
 Blazecraft,Fire,0,TRUE,Ichor
-Hydrocraft,"Slash, Bludgeon, Pierce",0,TRUE,Ichor
+Hydrocraft,"Suffocation, Slash, Bludgeon, Pierce",0,TRUE,Ichor
 Electrocraft,Electric,0,TRUE,Ichor
 Terracraft,"Slash, Bludgeon, Hew, Pierce",0,TRUE,Ichor
 Galecraft,"Slash, Bludgeon, Shockwave",0,TRUE,Ichor
@@ -16,14 +16,14 @@ Mindcraft,Psychic,0,FALSE,Ichor
 Ferracraft,"Slash, Bludgeon, Hew, Pierce",0,TRUE,Ichor
 Sonocraft,Shockwave,0,FALSE,Ichor
 Hemacraft,Bleed,0,TRUE,Ichor
-Spidercraft,Bludgeon,0,TRUE,Ichor
+Spidercraft,"Suffocation, Bludgeon",0,TRUE,Ichor
 Plasmacraft,Fire,0,TRUE,Ichor
 Stormcraft,"Electric, Shockwave",0,TRUE,Ichor
 Magmacraft,"Fire, Bludgeon",0,TRUE,Ichor
 Blizzardcraft,"Cold, Slash, Bludgeon, Pierce",0,TRUE,Ichor
 Fire Rune,Fire,0,FALSE,Focus
 Earth Rune,"Slash, Bludgeon, Hew, Pierce",0,FALSE,Focus
-Water Rune,"Slash, Bludgeon, Pierce",0,FALSE,Focus
+Water Rune,"Suffocation, Slash, Bludgeon, Pierce",0,FALSE,Focus
 Air Rune,"Slash, Bludgeon, Shockwave",0,FALSE,Focus
 Electricity Rune,Electric,0,FALSE,Focus
 Cold Rune,Cold,0,FALSE,Focus
