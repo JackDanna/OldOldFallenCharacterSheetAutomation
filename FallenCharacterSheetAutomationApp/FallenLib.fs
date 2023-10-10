@@ -1560,7 +1560,7 @@ module BuildRules =
         let RangeOptionMap string =
             match string with
             | "None" -> None
-            | _      -> Some (rangeMap.Item string)
+            | _      -> rangeMap.Item string |> Some
 
         // ResourceClassData
         let resourceClassMap : Map<string,ResourceClass> = stringArrayToTypeMap resourceClassData
