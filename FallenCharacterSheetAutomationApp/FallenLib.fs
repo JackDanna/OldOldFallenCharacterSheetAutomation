@@ -885,20 +885,20 @@ module SkillStat =
     type SkillStat = {
         name               : string
         lvl                : Neg1To4
-        governingAttribute : Attribute array
+        governingAttributes : Attribute array
     }
 
     let tupleToSkillStat (attributeMap:Map<string,Attribute>) (name, lvl, governingAttribute) = { 
         name               = name
         lvl                = intToNeg1To4  lvl
-        governingAttribute = attributeMap.Item governingAttribute |> Array.singleton
+        governingAttributes = attributeMap.Item governingAttribute |> Array.singleton
     }
 
     let findSkillStat (skillName:string) (skillStatArray: SkillStat array) =
         Array.filter (fun skill -> skill.name = skillName) skillStatArray
         |> (fun list ->
             if list.Length = 0 then
-                {name = skillName; lvl = Zero; governingAttribute = [||]}
+                {name = skillName; lvl = Zero; governingAttributes = [||]}
             else
                 Array.maxBy (fun skill -> skill.lvl) list
         )
@@ -921,7 +921,7 @@ module SkillRoll =
         Array.filter ( fun attributeStat -> 
             Array.exists ( fun skillGoverningAttribute -> 
                 attributeStat.attribute = skillGoverningAttribute
-            ) skillStat.governingAttribute
+            ) skillStat.governingAttributes
         ) attributeStats
         |> Array.sumBy ( fun attributeStat -> convert_Neg1To4_To_Int ( attributeStat.lvl ) )
         |> intToDicePoolModification
@@ -931,7 +931,7 @@ module SkillRoll =
         let skillDiceMods     = convert_Neg1To4_To_Int ( skillStat.lvl ) |> intToDicePoolModification
         let attributeDiceMods = matchAttributeDiceWithSkillDice skillStat attributeStats
         let diceMod = 
-            determineAttributeDeterminedDiceMod skillStat.governingAttribute attributeDeterminedDiceModArray
+            determineAttributeDeterminedDiceMod skillStat.governingAttributes attributeDeterminedDiceModArray
             |> Array.append [| skillDiceMods; attributeDiceMods |]
         {
             desc     = skillStat.name
@@ -1175,9 +1175,9 @@ module MagicCombatRoll =
         let range = determineMagicRange rangeMap magicCombatType.desc <| (convert_Neg1To4_To_Int skillStat.lvl)
 
         let diceMods =
-            determineAttributeDeterminedDiceMod skillStat.governingAttribute attributeDeterminedDiceModArray
+            determineAttributeDeterminedDiceMod skillStat.governingAttributes attributeDeterminedDiceModArray
             |> Array.append [|
-                determineAttributeDiceMod skillStat.governingAttribute attributeStats
+                determineAttributeDiceMod skillStat.governingAttributes attributeStats
                 convert_Neg1To4_To_Int skillStat.lvl |> intToDicePoolModification
                 magicCombatType.diceModification
                 resourceDice
@@ -1745,9 +1745,9 @@ module BuildRules =
             | (name, lvl) ->
                 if weaponClassMap.Keys.Contains name then
                     let weaponClass = weaponClassMap.Item name
-                    { name = name; lvl = intToNeg1To4 lvl; governingAttribute = weaponClass.governingAttributes }
+                    { name = name; lvl = intToNeg1To4 lvl; governingAttributes = weaponClass.governingAttributes }
                 else
-                    { name = name; lvl = intToNeg1To4 lvl; governingAttribute = vocationGoverningAttributes }
+                    { name = name; lvl = intToNeg1To4 lvl; governingAttributes = vocationGoverningAttributes }
 
         let createVocationStat (vocationDataArray: (string * int * (string * int) array ) array) =
             Array.map ( fun vocationData ->
