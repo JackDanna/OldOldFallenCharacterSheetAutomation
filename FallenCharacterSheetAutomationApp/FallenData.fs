@@ -17,6 +17,7 @@ module Data =
         | "FALSE" -> false
         | _-> failwith("Error: returns " + boolString)
 
+//
     let damageTypeData = 
         makeFallenData
             "DamageTypeData.csv"
