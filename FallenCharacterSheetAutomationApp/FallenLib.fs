@@ -1,6 +1,6 @@
 ﻿namespace FallenLib
 
-// Util
+// Util!
 module StringUtils =
     open System.Text.RegularExpressions
 
